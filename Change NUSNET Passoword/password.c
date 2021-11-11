@@ -30,9 +30,9 @@ int isValidPassword (char domain[], char id[], char old[], char newer[], char co
             printf ("Invalid characters");
             return -1;
         }
-        if (isalpha(newer[i])!= 0) //if char is letter
+        if (isalpha(newer[i])!= 0) 
         {
-            if (newer[i] >= 'A' && newer[i]<= 'Z' ) //contains any form of capital letters
+            if (newer[i] >= 'A' && newer[i]<= 'Z' ) 
             {
             flag1 = 1;
             }
@@ -46,14 +46,14 @@ int isValidPassword (char domain[], char id[], char old[], char newer[], char co
 
     if (flag1 ==0 || flag2 ==0)
     {
-        printf ("\nPlease have both caps and smalls");
+        printf ("\nPlease have both capital letters and small letters!");
         return -1;
     }
 
 
     if (strstr(newer,id) != NULL)
     {
-        printf ("ID cannot be in passworrd");
+        printf ("ID cannot be in password");
         return -1;
     }
 
@@ -70,11 +70,11 @@ int isValidPassword (char domain[], char id[], char old[], char newer[], char co
 
 int main()
 {
-    char domain[16] = "NUSSTF";
-    char id[16] = "a0123456";
-    char old[16]= "aaa";
-    char newer[16]= "a0123456X";
-    char confirm[16]="a0123456X";
+    char domain[16];
+    char id[16];
+    char old[16];
+    char newer[16];
+    char confirm[16];
     printf ("%s\n%s\n%s\n%s\n%s\n", domain, id, old, newer, confirm);
     /*printf ("Domain:");
     scanf ("%s", &domain);
@@ -90,13 +90,13 @@ int main()
 
     printf ("\nConfirm:");
     scanf ("%s", &confirm);*/
-    int ans;
-    ans = isValidPassword (domain, id, old , newer, confirm);
-    if (ans ==1)
+    
+    isValidPassword (domain, id, old , newer, confirm);
+    if (isValidPassword)
     {
         printf ("\nPassword changed successfully!");
     }
-    else if (ans !=1)
+    else 
     {
         printf ("\nChange failed!");
     }
