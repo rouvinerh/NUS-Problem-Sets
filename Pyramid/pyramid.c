@@ -79,3 +79,38 @@ void maxPathValueDown (int *arr[10], int size)
     printf ("\nMaximum path value from top to bottom = %d", max);
 
 }
+int main()
+{
+    int size;
+    int *arr[10];
+    int sum;
+    int max;
+
+    printf ("Enter number of rows:");
+    scanf ("%d", &size);
+    printf ("Enter values of the array:");
+
+    for (int z=0; z<size;z+=1)
+    {
+        arr[z] = calloc(z+1, sizeof(int));
+    }
+
+    for (int r=0; r<size; r+=1)
+    {
+        for (int c=0; c<=r; c+=1)
+        {
+            scanf ("%d", &arr[r][c]);
+        }
+    }
+    printf ("\n");
+    for (int r=0; r<size; r+=1)
+    {
+        for (int c=0; c<=r; c+=1)
+        {
+            printf ("%d ", arr[r][c]);
+        }
+        printf ("\n");
+    }
+
+    maxPathValueUp(arr,size); 
+    maxPathValueDown(arr.size);
