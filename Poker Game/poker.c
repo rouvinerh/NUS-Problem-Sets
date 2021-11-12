@@ -89,8 +89,8 @@ void *type_and_keycard_ranks (int arr[], int *hand_rank, int *card_rank)
 
 int main()
 {
-    int plr1 [5]= {2,2,2,2,11};
-    int plr2 [5]= {13,12,12,12,12};
+    int plr1 [5];
+    int plr2 [5];
     int card_rank1, card_rank2;
     int hand_rank1, hand_rank2;
     int winner;
